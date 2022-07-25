@@ -2,6 +2,18 @@ const express = require('express');
 const path = require('path');
 const favicon = require('serve-favicon');
 const logger = require('morgan');
+require('dotenv').config();
+require('./config/database');
+
+// Require the Mongoose models
+// const User = require('./models/user');
+// const Item = require('./models/foodItem');
+// const Restaurant = require('./models/restaurant');
+// const Meal = require('./models/meal');
+
+// Local variables will come in handy for holding retrieved documents
+let user, item, restaurant, meal;
+let users, items, restaurants, meals;
 
 const app = express();
 

@@ -5,10 +5,11 @@ import AuthPage from '../AuthPage/AuthPage';
 import { getUser } from '../../utilities/users-service';
 import MealHistoryPage from '../MealHistoryPage/MealHistory';
 import SelectMealPage from '../SelectMealPage/SelectMeal';
+import NavBar from '../../components/NavBar/NavBar';
 
 export default function App() {
 
-  const [user, setUser] = useState(getUser())
+  const [user, setUser] = useState(null)
 
   return (
     <main className="App">

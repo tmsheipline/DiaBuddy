@@ -3,24 +3,24 @@ import { Link } from "react-router-dom";
 import * as userService from "../../utilities/users-service";
 import { FaBars, FaTimes } from "react-icons/fa";
 import { useState } from "react";
-import {Button} from '../Button/Button'
+// import {Button} from '../Button/Button'
 
 export default function NavBar({ user, setUser }) {
   const [click, setClick] = useState(false);
 
-  const [button, setButton] = useState(true);
+  // const [button, setButton] = useState(true);
 
   const closeMobileMenu = () => setClick(false)
 
-  const showButton = () => {
-    if(window.innerwidth <= 960){
-      setButton(false)
-    } else {
-      setButton(true)
-    }
-  }
+  // const showButton = () => {
+  //   if(window.innerwidth <= 960){
+  //     setButton(false)
+  //   } else {
+  //     setButton(true)
+  //   }
+  // }
 
-  window.addEventListener('resize', showButton);
+  // window.addEventListener('resize', showButton);
 
   function handleClick() {
     setClick(!click);
@@ -39,23 +39,16 @@ export default function NavBar({ user, setUser }) {
           <Link to="/" className="navbar-logo" onClick={closeMobileMenu}>
             DiaBuddy
           </Link>
-          {/* <FaSyringe className="navbar-icon" /> */}
-
           <div className="menu-icon" onClick={handleClick}>
             {click ? <FaTimes /> : <FaBars />}
           </div>
           <ul className={click ? "nav-menu active" : "nav-menu"}>
-            {/* <li className="nav-item">
-              <Link to="/selectmeal/new" className="nav-links" onClick={closeMobileMenu}>
-                Select Restaurant
-              </Link>
-              </li> */}
               <li className="nav-item">
               <Link to="/selectmeal" className="nav-links" onClick={closeMobileMenu}>
                 Meal History
               </Link>
               </li>
-              <li className="nav-btn">
+              {/* <li className="nav-btn">
               {button ? (
                 <Link to='/AuthPage' className="btn-link">
                   <Button buttonstyle='btn--outline'>Login/SignUp</Button>
@@ -67,7 +60,7 @@ export default function NavBar({ user, setUser }) {
                       Login/SignUp</Button>
                 </Link>
               )}
-              </li>
+              </li> */}
               <li className="nav-item">
               <Link to="" className="nav-links" onClick={closeMobileMenu}>
                 Welcome, {user.name}

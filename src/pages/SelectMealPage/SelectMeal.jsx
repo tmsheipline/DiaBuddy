@@ -1,7 +1,10 @@
+import SearchBar from "../../components/SearchBar/SearchBar";
+import { FaSearch } from "react-icons/fa";
+
 export default function SelectMealPage() {
   return (
     <>
-      <h1>Select Meal Page</h1>
+      <SearchBar placeholder='Search...'/>
     </>
   );
 }

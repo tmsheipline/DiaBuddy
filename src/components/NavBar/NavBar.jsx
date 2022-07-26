@@ -1,12 +1,26 @@
 import "./NavBar.css";
 import { Link } from "react-router-dom";
-// Using the import below, we can call any exported function using: userService.someMethod()
 import * as userService from "../../utilities/users-service";
-import { FaBars, FaTimes, FaSyringe } from "react-icons/fa";
+import { FaBars, FaTimes } from "react-icons/fa";
 import { useState } from "react";
+import {Button} from '../Button/Button'
 
 export default function NavBar({ user, setUser }) {
   const [click, setClick] = useState(false);
+
+  const [button, setButton] = useState(true);
+
+  const closeMobileMenu = () => setClick(false)
+
+  const showButton = () => {
+    if(window.innerwidth <= 960){
+      setButton(false)
+    } else {
+      setButton(true)
+    }
+  }
+
+  window.addEventListener('resize', showButton);
 
   function handleClick() {
     setClick(!click);
@@ -21,30 +35,51 @@ export default function NavBar({ user, setUser }) {
   return (
     <>
       <div className="nav-bar container">
-        <nav className="navbar-container container">
-          <Link to="/" className="navbar-logo">
+        <div className="navbar-container container">
+          <Link to="/" className="navbar-logo" onClick={closeMobileMenu}>
             DiaBuddy
           </Link>
-          <FaSyringe className="navbar-icon" />
+          {/* <FaSyringe className="navbar-icon" /> */}
 
           <div className="menu-icon" onClick={handleClick}>
             {click ? <FaTimes /> : <FaBars />}
           </div>
-          <div className={click ? "nav-menu active" : "nav-menu"}>
-            <div className="nav-item">
-              <Link to="/selectmeal/new" className="nav-links">
+          <ul className={click ? "nav-menu active" : "nav-menu"}>
+            {/* <li className="nav-item">
+              <Link to="/selectmeal/new" className="nav-links" onClick={closeMobileMenu}>
                 Select Restaurant
               </Link>
-              <Link to="/selectmeal" className="nav-links">
+              </li> */}
+              <li className="nav-item">
+              <Link to="/selectmeal" className="nav-links" onClick={closeMobileMenu}>
                 Meal History
               </Link>
-              Welcome, {user.name}
-              <Link to="" className="nav-links" onClick={handleLogOut}>
-                Log Out
+              </li>
+              <li className="nav-btn">
+              {button ? (
+                <Link to='/AuthPage' className="btn-link">
+                  <Button buttonstyle='btn--outline'>Login/SignUp</Button>
+                </Link>
+              ): (
+                <Link to='/AuthPage' className="btn-link" onClick={closeMobileMenu}>
+                  <Button buttonstyle='btn--outline'
+                    buttonSize='btn--mobile'>
+                      Login/SignUp</Button>
+                </Link>
+              )}
+              </li>
+              <li className="nav-item">
+              <Link to="" className="nav-links" onClick={closeMobileMenu}>
+                Welcome, {user.name}
               </Link>
-            </div>
-          </div>
-        </nav>
+              </li>
+                <li className="nav-item">
+                <Link to="" className="nav-links" onClick={handleLogOut}>
+                  Log Out
+                </Link>
+              </li>
+          </ul>
+        </div>
       </div>
     </>
   );

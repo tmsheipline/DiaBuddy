@@ -13,17 +13,30 @@ export default function App() {
 
   return (
     <main className="App">
-      { user ?
-      <>
         <NavBar user={user} setUser={setUser} />
         <Routes>
-          <Route path="/selectmeal/new" element={<SelectMealPage />} />
+        <Route path="/" element={<SelectMealPage/>} />
           <Route path="/selectmeal" element={<MealHistoryPage />} />
+          <Route path="/AuthPage" element={<AuthPage/>} />
         </Routes>
-      </>
-        :
-        <AuthPage setUser={setUser} />
-      }
     </main>
   );
 }
+
+// return (
+//   <main className="App">
+//     { user ?
+//     <>
+//       <NavBar user={user} setUser={setUser} />
+//       <Routes>
+//       <Route path="/" element={<SelectMealPage/>} />
+//         {/* <Route path="/selectmeal/new" element={<SelectMealPage />} /> */}
+//         <Route path="/selectmeal" element={<MealHistoryPage />} />
+//       </Routes>
+//     </>
+//       :
+//       <AuthPage setUser={setUser} />
+//     }
+//   </main>
+// );
+// }

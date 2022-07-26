@@ -1,12 +1,14 @@
-h1{
+h3{
     font-size: clamp(1rem, 3vw + 1rem, 4rem);
     position: relative;
     /* outline: 2px solid red; */
     width: max-content;
+    margin: 0 auto;
+
 }
 
-h1::before,
-h1::after{
+h3::before,
+h3::after{
     content: '';
     position: absolute;
     top: 0;
@@ -15,12 +17,12 @@ h1::after{
     left: 0;
 }
 
-h1::before{
+h3::before{
     background: gray;
     animation: typewriter 3s steps(50) forwards;
 }
 
-h1::after{
+h3::after{
     width: .125em;
     background: black;
     animation: typewriter 3s steps(50) forwards,

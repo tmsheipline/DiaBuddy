@@ -7,10 +7,9 @@ import React from 'react'
 function TypingAnimation() {
   return (
     <>
-    <h1>Search Restaurants.</h1> 
-    <h1>Select Food Items.</h1>   
-    <h1>Obtain Carb Information.</h1>
-    <h1>It's That Easy.</h1>
+    <h3>Search Restaurants</h3> 
+    {/* <h3>Select Food Items</h3>   
+    <h3>Obtain Carb Information</h3> */}
     </>
   )
 }

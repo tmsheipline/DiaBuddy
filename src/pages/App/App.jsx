@@ -19,11 +19,11 @@ export default function App() {
       {user ? (
         <>
           <NavBar user={user} setUser={setUser} />
+           {/* <TypingAnimation /> */}
           <Routes>
             <Route path="/" element={<SelectMealPage />} />
             <Route path="/selectmeal" element={<MealHistoryPage />} />
           </Routes>
-           <TypingAnimation />
         </>
       ) : (
         <AuthPage setUser={setUser} />

@@ -30,17 +30,20 @@ export default function NavBar({ user, setUser }) {
           <div className="menu-icon" onClick={handleClick}>
             {click ? <FaTimes /> : <FaBars />}
           </div>
-          <div className={click ? 'nav-menu active' : 'nav-menu'}>
-          <div className="nav-item">
-            <Link to="/selectmeal/new" className="nav-links">Select Restaurant</Link>
-            <Link to="/selectmeal" className="nav-links">Meal History</Link>
-            Welcome, {user.name}
-            <Link to="" 
-           className="nav-links" onClick={handleLogOut}>
-              Log Out
-            </Link>
+          <div className={click ? "nav-menu active" : "nav-menu"}>
+            <div className="nav-item">
+              <Link to="/selectmeal/new" className="nav-links">
+                Select Restaurant
+              </Link>
+              <Link to="/selectmeal" className="nav-links">
+                Meal History
+              </Link>
+              Welcome, {user.name}
+              <Link to="" className="nav-links" onClick={handleLogOut}>
+                Log Out
+              </Link>
+            </div>
           </div>
-        </div>
         </nav>
       </div>
     </>

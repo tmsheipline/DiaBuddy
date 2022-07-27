@@ -1,9 +1,9 @@
 // Require the Mongoose models
 const User = require('./models/user');
-// const FoodItem = require('./models/foodItem');
-// const Restaurant = require('./models/restaurant');
-// const Meal = require('./models/meal');
+const FoodItem = require('./models/foodItem');
+const Brand = require('./models/brand');
+const SelectedMeal = require('./models/selectedMeal');
 
 // Local variables will come in handy for holding retrieved documents
-let user, item, restaurant, meal;
-let users, items, restaurants, meals;
+let user, foodItem, brand, selectedMeal;
+let users, foodItems, brands, selectedMeals;

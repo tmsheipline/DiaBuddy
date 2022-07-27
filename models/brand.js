@@ -9,3 +9,10 @@ const brandSchema = new Schema({
 });
 
 module.exports = mongoose.model('Brand', brandSchema);
+
+
+// API
+// const brandSchema = new Schema({
+//   food_name: {type: String, required: true},
+//   photo: String,
+// });

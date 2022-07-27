@@ -4,7 +4,7 @@ import {useState, useEffect} from 'react';
 
    export default function FetchAPI() {
 
-    const [data, setData] = useState([]);
+    const [data, setData] = useState();
   
         const apiGet = () => {
           fetch("https://trackapi.nutritionix.com/v2/search/instant?query=mcdonalds",{

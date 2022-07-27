@@ -13,5 +13,8 @@ module.exports = mongoose.model('Brand', brandSchema);
 
 // API
 // const brandSchema = new Schema({
-//   brand_name: String
+// brand_name: String,
+// nix_brand_id: String,
+
+
 // });

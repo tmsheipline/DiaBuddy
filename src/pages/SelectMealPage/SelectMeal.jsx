@@ -9,6 +9,11 @@ export default function SelectMealPage() {
       <TypingAnimation />
       <SearchBar placeholder='Search...'/>
       <RenderApi />
+      {/* <div className="image-grid">
+        <img src="/DiabuddyLogo.png" alt="" />
+        <img src="https://fabrikbrands.com/wp-content/uploads/Famous-Fast-Food-Logos-16-1200x750.png" alt="" />
+        <img src="https://fabrikbrands.com/wp-content/uploads/Famous-Fast-Food-Logos-6-1200x750.png" alt="" />
+      </div> */}
     </>
   );
 }

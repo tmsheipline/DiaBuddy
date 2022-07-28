@@ -7,7 +7,7 @@ export default function FetchAPI() {
   const [query, setQuery] = useState('');
 
       const apiGet = () => {
-        fetch(`https://trackapi.nutritionix.com/v2/search/instant?query=mcdonalds`,{
+        fetch(`https://trackapi.nutritionix.com/v2/search/instant?query=mcdonalds&branded=false&detailed=true`,{
           headers: {
                   "x-app-id": "fc7518c6",
                   "x-app-key": "f167b58e25c39e81c5d8bff3a9c546bd",

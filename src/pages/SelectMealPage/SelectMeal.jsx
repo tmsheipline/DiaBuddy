@@ -7,13 +7,13 @@ import { Link } from "react-router-dom";
 import { useState} from 'react'
 
 
-export default function SelectMealPage(props) {
+export default function SelectMealPage() {
 
   const [data, setData] = useState();
   const [query, setQuery] = useState('');
 
   const apiGet = () => {
-    fetch(`https://trackapi.nutritionix.com/v2/search/instant?query=mcdonalds`,{
+    fetch(`https://trackapi.nutritionix.com/v2/search/instant?query=mcdonalds&branded=false&detailed=true`,{
       headers: {
               "x-app-id": "fc7518c6",
               "x-app-key": "f167b58e25c39e81c5d8bff3a9c546bd",
@@ -29,7 +29,7 @@ export default function SelectMealPage(props) {
   return (
     <>
       <TypingAnimation />
-      <SearchBar placeholder="Search..." />
+      <SearchBar placeholder="Search..." query={query} setQuery={setQuery} />
       <div className="imagegridcontainer">
         <div className="imagegrid">
           <Link to="/fiveguys">
@@ -93,8 +93,7 @@ export default function SelectMealPage(props) {
           </button>
         </div>
       </div>
-
-      <RenderApi />
+      <RenderApi query={query} />
     </>
   );
 }

@@ -3,19 +3,19 @@ const foodItem = require('../../models/foodItem');
 module.exports = {
   index,
   show,
-  getAll,
+  // getAll,
 };
 
-async function getAll(req,res){
-  const allItems = await foodItem.find({},(error,data)=> {
-    if (error){
-      console.log(error)
-      res.json(error)
-    } else {
-      res.json(data)
-    }
-  })
-}
+// async function getAll(req,res){
+//   const allItems = await foodItem.find({},(error,data)=> {
+//     if (error){
+//       console.log(error)
+//       res.json(error)
+//     } else {
+//       res.json(data)
+//     }
+//   })
+// }
 
 async function index(req, res) {
   const foodItems = await foodItem.find({}).sort('name').populate('brand').exec();

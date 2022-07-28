@@ -16,14 +16,6 @@ import Mcdonaldspage from "../Mcdonalds/Mcdonaldspage";
 export default function App() {
   const [user, setUser] = useState(getUser());
 
-  useEffect(() =>{ 
-    (async () => {
-      const allItem = await foodsAPI.getAll()
-      console.log(allItem)
-    })()
-  }, []
-  )
-
 
   return (
     <main className="App">

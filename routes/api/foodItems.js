@@ -3,7 +3,7 @@ const router = express.Router();
 const foodItemsCtrl = require('../../controllers/api/foodItems');
 
 
-router.get('/', foodItemsCtrl.getAll);
+router.get('/', foodItemsCtrl.index);
 router.get('/:id', foodItemsCtrl.show);
 
 module.exports = router;

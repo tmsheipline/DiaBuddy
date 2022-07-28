@@ -8,6 +8,7 @@ import SelectMealPage from "../SelectMealPage/SelectMeal";
 import NavBar from "../../components/NavBar/NavBar";
 import * as foodsAPI from '../../utilities/foodItems-api'
 import FiveGuysPage from "../FiveGuysPage/FiveGuysPage";
+import Mcdonaldspage from "../Mcdonalds/Mcdonaldspage";
 
 
 

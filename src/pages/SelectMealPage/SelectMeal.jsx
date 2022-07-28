@@ -1,16 +1,35 @@
 import SearchBar from "../../components/SearchBar/SearchBar";
-import { FaSearch } from "react-icons/fa";
+// import { FaSearch } from "react-icons/fa";
 import TypingAnimation from "../../components/TypingAnimation/TypingAnimation";
 import RenderApi from "../../components/API/RenderAPI";
 import "./SelectMealPage.css";
 import { Link } from "react-router-dom";
-import BrandCard from "../../components/BrandCard/BrandCard";
+import { useState} from 'react'
+
 
 export default function SelectMealPage(props) {
+
+  const [data, setData] = useState();
+  const [query, setQuery] = useState('');
+
+  const apiGet = () => {
+    fetch(`https://trackapi.nutritionix.com/v2/search/instant?query=mcdonalds`,{
+      headers: {
+              "x-app-id": "fc7518c6",
+              "x-app-key": "f167b58e25c39e81c5d8bff3a9c546bd",
+              "Content-Type":'application/json',
+              },})
+      .then((response) => response.json())
+      .then((json) => {
+        console.log(json);
+        setData(json)
+      });
+  };
+
   return (
     <>
       <TypingAnimation />
-      {/* <SearchBar placeholder="Search..." /> */}
+      <SearchBar placeholder="Search..." />
       <div className="imagegridcontainer">
         <div className="imagegrid">
           <Link to="/fiveguys">
@@ -22,10 +41,11 @@ export default function SelectMealPage(props) {
             </button>
           </Link>
         <Link to='/mcdonalds'>
-          <button>
+          <button onClick={apiGet}>
             <img
               src="https://you.com/proxy?url=https%3A%2F%2Ftse3.mm.bing.net%2Fth%3Fid%3DOIP.AANuGoW1uBdgmlr54kdG2AHaHa%26pid%3DApi"
               alt="Mcdonalds"
+              
             />
           </button>
           </Link>

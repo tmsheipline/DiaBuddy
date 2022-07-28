@@ -7,6 +7,8 @@ import MealHistoryPage from "../MealHistoryPage/MealHistory";
 import SelectMealPage from "../SelectMealPage/SelectMeal";
 import NavBar from "../../components/NavBar/NavBar";
 import * as foodsAPI from '../../utilities/foodItems-api'
+import FiveGuysPage from "../FiveGuysPage/FiveGuysPage";
+
 
 
 
@@ -30,6 +32,8 @@ export default function App() {
           <Routes>
             <Route path="/" element={<SelectMealPage />} />
             <Route path="/selectmeal" element={<MealHistoryPage />} />
+            <Route path="/fiveguys" element={<FiveGuysPage/>}/>
+            <Route path="/mcdonalds" element={<Mcdonaldspage/>}/>
           </Routes>
         </>
       ) : (

@@ -44,6 +44,11 @@ export default function NavBar({ user, setUser }) {
           </div>
           <ul className={click ? "nav-menu active" : "nav-menu"}>
               <li className="nav-item">
+              <Link to="/" className="nav-links" onClick={closeMobileMenu}>
+                Restaurants
+              </Link>
+              </li>
+              <li>
               <Link to="/selectmeal" className="nav-links" onClick={closeMobileMenu}>
                 Meal History
               </Link>

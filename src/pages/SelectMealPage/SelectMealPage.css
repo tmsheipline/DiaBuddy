@@ -7,3 +7,48 @@
     display: grid;
     grid-template-rows: 2;
 } */
+
+.container {
+    background:url(http://api.thumbr.it/whitenoise-361x370.png?background=ccdce3ff&noise=626262&density=15&opacity=51) repeat;
+    width:750px;
+    height:160px;
+    margin: 0 auto;
+    padding:40px;
+    border-radius:15px;
+  }
+  .cube {
+      margin: 0 auto;
+     display:inline-block;
+      width: 180px;
+      text-align: center;
+      height: 150px;
+      -webkit-transition: -webkit-transform .33s;
+      transition: transform .33s; /* Animate the transform properties */
+      -webkit-transform-style: preserve-3d;
+      transform-style: preserve-3d;
+  }
+  
+  .flip,.flop {
+      border: 1px solid grey;
+      -webkit-border-radius: 5px;
+      border-radius: 5px;
+      height: 150px;
+  }
+  
+  .flip {
+        background: rgb(245, 245, 245);
+      -webkit-transform: translateZ(70px);
+      transform: translateZ(70px);
+  }
+  
+  .flop {
+    height:150px;
+    background: rgb(220, 220, 220);
+      -webkit-transform: rotateX(-90deg) translateZ(-70px);
+      transform: rotateX(-90deg) translateZ(-70px);
+  }
+  
+  .cube:hover {
+      -webkit-transform: rotateX(90deg);
+      transform: rotateX(90deg);
+  }

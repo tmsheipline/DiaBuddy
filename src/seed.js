@@ -1,8 +1,8 @@
 require('dotenv').config();
-require('./config/database');
+require('../config/database');
 
-const Brand = require('./models/brand');
-const foodItem = require('./models/foodItem');
+const Brand = require('../models/brand');
+const foodItem = require('../models/foodItem');
 
 // IIFE - Immediately Invoked Function Expression
 (async function() {
@@ -20,7 +20,7 @@ const foodItem = require('./models/foodItem');
             "https://fabrikbrands.com/wp-content/uploads/Famous-Fast-Food-Logos-6-1200x750.png",
         },
         {
-          name: "Burger Kind",
+          name: "Burger King",
           image:
             "https://fabrikbrands.com/wp-content/uploads/Famous-Fast-Food-Logos-19-1200x750.png",
         },
@@ -90,6 +90,5 @@ const foodItem = require('./models/foodItem');
   process.exit();
 
 })();
-
 
 

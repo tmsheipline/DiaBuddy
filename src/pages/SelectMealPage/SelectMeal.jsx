@@ -5,6 +5,7 @@ import RenderApi from "../../components/API/RenderAPI";
 import "./SelectMealPage.css";
 import { Link } from "react-router-dom";
 import { useState} from 'react'
+import Meal from '../../components/Meal/Meal'
 
 
 export default function SelectMealPage() {

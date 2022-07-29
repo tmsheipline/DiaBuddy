@@ -12,23 +12,23 @@ const lineItemSchema = new Schema({
     toJSON: { virtuals: true }
   });
 
-  // Add an extPrice to the line item
-lineItemSchema.virtual('extPrice').get(function () {
-    // 'this' is bound to the lineItem subdocument
-    return this.qty * this.item.carbs;
-  });
+//   // Add an extPrice to the line item
+// lineItemSchema.virtual('extPrice').get(function () {
+//     // 'this' is bound to the lineItem subdocument
+//     return this.tag_name * this.item.carbs;
+//   });
 
-const selectedMealSchema = new Schema({
-    // An order belongs to a user
-    user: { type: Schema.Types.ObjectId, ref: 'User' },
-    // Embed an order's line items is logical
-    lineItems: [lineItemSchema],
-    // A user's unpaid order is their "cart"
-    isPaid: { type: Boolean, default: false },
-  }, {
-    timestamps: true,
-    toJSON: { virtuals: true }
-  });
+// const selectedMealSchema = new Schema({
+//     // An order belongs to a user
+//     user: { type: Schema.Types.ObjectId, ref: 'User' },
+//     // Embed an order's line items is logical
+//     lineItems: [lineItemSchema],
+//     // A user's unpaid order is their "cart"
+//     isPaid: { type: Boolean, default: false },
+//   }, {
+//     timestamps: true,
+//     toJSON: { virtuals: true }
+//   });
 
   // Add the following helpful virtuals to order documents
 // selectedMeal.virtual('selectedMealTotal').get(function () {
@@ -44,18 +44,18 @@ const selectedMealSchema = new Schema({
 //   });
 
   // statics are callable on the model, not an instance (document)
-selectedMealSchema.statics.getCart = function(userId) {
+// selectedMealSchema.statics.getCart = function(userId) {
     // 'this' is bound to the model (don't use an arrow function)
     // return the promise that resolves to a cart (the user's unpaid order)
-    return this.findOneAndUpdate(
-      // query
-      { user: userId, isPaid: false },
-      // update - in the case the order (cart) is upserted
-      { user: userId },
-      // upsert option creates the doc if it doesn't exist!
-      { upsert: true, new: true }
-    );
-  };
+  //   return this.findOneAndUpdate(
+  //     // query
+  //     { user: userId, isPaid: false },
+  //     // update - in the case the order (cart) is upserted
+  //     { user: userId },
+  //     // upsert option creates the doc if it doesn't exist!
+  //     { upsert: true, new: true }
+  //   );
+  // };
   
 
   module.exports = mongoose.model('SelectedMeal', selectedMealSchema)

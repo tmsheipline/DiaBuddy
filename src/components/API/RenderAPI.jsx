@@ -4,7 +4,7 @@ import {useState, useEffect} from 'react';
 export default function FetchAPI({query}) {
 
   const [data, setData] = useState();
-  // const [query, setQuery] = useState('');
+
 
       const apiGet = () => {
         fetch(`https://trackapi.nutritionix.com/v2/search/instant?query=${query}&branded=false&detailed=true`,{

@@ -27,7 +27,7 @@ export default function SearchBar({ placeholder, query, setQuery }) {
     )
       .then((response) => response.json())
       .then((json) => {
-        console.log(json.common);
+        // console.log(json.common);
         setData(json.common);
       });
   };
@@ -71,17 +71,34 @@ export default function SearchBar({ placeholder, query, setQuery }) {
 //   });
 
   let carbValue = [];
-  data.forEach((foodItem) => {
+  data.forEach((foodItem, idx) => {
     let nutrition = {};
+    nutrition.serving_unit = foodItem.serving_unit
     nutrition.tag_name = foodItem.tag_name;
-    // nutrition.photo.thumb = foodItem.photo.thumb
+    nutrition.photo = foodItem.photo.thumb
+    console.log(foodItem.photo.thumb)
     foodItem.full_nutrients.map((value) => {
       if (value.attr_id === 205) {
         nutrition.carbs = parseInt(value.value);
       }
     });
     carbValue.push(nutrition);
+    // console.log(data[0].photo.thumb)
+    // console.log(`This is NUTS ${nutrition}`)
   });
+  // console.log(`This is carbvalue ${carbValue}`)
+  // let carbValue = [];
+  // data.forEach((foodItem) => {
+  //   let nutrition = {};
+  //   nutrition.photo.thumb = foodItem.photo.thumb;
+  //   // nutrition.photo = foodItem.photo
+  //   foodItem.full_nutrients.map((value) => {
+  //     if (value.attr_id === 205) {
+  //       nutrition.carbs = parseInt(value.value);
+  //     }
+  //   });
+  //   carbValue.push(nutrition);
+  // });
 
   return (
     <>
@@ -100,8 +117,8 @@ export default function SearchBar({ placeholder, query, setQuery }) {
           <hr />
         </div>
       </div>
-      {carbValue.map((item)=>{
-        return <FoodInfo item={item} />
+      {carbValue.map((item, idx)=>{
+        return <FoodInfo key={idx}  item={item} />
       })}
     </>
   );

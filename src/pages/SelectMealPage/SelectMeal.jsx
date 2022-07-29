@@ -30,7 +30,7 @@ export default function SelectMealPage() {
     <>
       <TypingAnimation />
       <SearchBar placeholder="Search..." query={query} setQuery={setQuery} />
-      <div className="imagegridcontainer">
+      {/* <div className="imagegridcontainer">
         <div className="imagegrid">
           <Link to="/fiveguys">
             <button>
@@ -92,8 +92,8 @@ export default function SelectMealPage() {
             />
           </button>
         </div>
-      </div>
-      <RenderApi query={query} />
+      </div> */}
+      {/* <RenderApi query={query} /> */}
     </>
   );
 }

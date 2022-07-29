@@ -27,82 +27,39 @@ export default function SearchBar({ placeholder, query, setQuery }) {
     )
       .then((response) => response.json())
       .then((json) => {
-        // console.log(json.common);
+        console.log(json.common);
         setData(json.common);
       });
   };
-  // console.log(data)
-  // let nutrientVal;
-  // // let getFoodName
-  // if (data) {
-  //   let nutrients = data[0].full_nutrients;
-  //   // let getFoodName = data;
-  //   //  console.log(data.common[0].food_name)
-  //   for (let i = 0; i < nutrients.length; i++) {
-  //     // console.log(nutrient.attr_id)
-  //     if (nutrients[i].attr_id === 205) {
-  //       nutrientVal = nutrients[i].value;
-  //     }
-  //   }
-  //   console.log(nutrientVal);
-
-  //  let foodName = data.common[0].food_name
-  //  console.log(foodName)
-  //  for (let f = 0; f < data.common.length; f++){
-  //   // console.log(nutrient.attr_id)
-  //     getFoodName[f] = foodName
-  //   }
-  //   console.log(getFoodName)
-  // }
-
-  // data.common[0].food_name
-
-// working
-// let carbValue = [];
-//   data.forEach((foodItem) => {
-//     let nutrition = {};
-//     nutrition.tag_name = foodItem.tag_name;
-//     foodItem.full_nutrients.map((value) => {
-//       if (value.attr_id === 205) {
-//         nutrition.carbs = value.value;
-//       }
-//     });
-//     carbValue.push(nutrition);
-//   });
+  // working
+  // let carbValue = [];
+  //   data.forEach((foodItem) => {
+  //     let nutrition = {};
+  //     nutrition.tag_name = foodItem.tag_name;
+  //     foodItem.full_nutrients.map((value) => {
+  //       if (value.attr_id === 205) {
+  //         nutrition.carbs = value.value;
+  //       }
+  //     });
+  //     carbValue.push(nutrition);
+  //   });
 
   let carbValue = [];
   data.forEach((foodItem, idx) => {
     let nutrition = {};
-    nutrition.serving_unit = foodItem.serving_unit
+    nutrition.serving_unit = foodItem.serving_unit;
     nutrition.tag_name = foodItem.tag_name;
-    nutrition.photo = foodItem.photo.thumb
-    console.log(foodItem.photo.thumb)
+    nutrition.photo = foodItem.photo.thumb;
+    console.log(foodItem.photo.thumb);
     foodItem.full_nutrients.map((value) => {
       if (value.attr_id === 205) {
         nutrition.carbs = parseInt(value.value);
       }
     });
     carbValue.push(nutrition);
-    // console.log(data[0].photo.thumb)
-    // console.log(`This is NUTS ${nutrition}`)
   });
-  // console.log(`This is carbvalue ${carbValue}`)
-  // let carbValue = [];
-  // data.forEach((foodItem) => {
-  //   let nutrition = {};
-  //   nutrition.photo.thumb = foodItem.photo.thumb;
-  //   // nutrition.photo = foodItem.photo
-  //   foodItem.full_nutrients.map((value) => {
-  //     if (value.attr_id === 205) {
-  //       nutrition.carbs = parseInt(value.value);
-  //     }
-  //   });
-  //   carbValue.push(nutrition);
-  // });
-
   return (
     <>
-    
       <div className="search">
         <div className="searchInputs">
           <input
@@ -117,8 +74,8 @@ export default function SearchBar({ placeholder, query, setQuery }) {
           <hr />
         </div>
       </div>
-      {carbValue.map((item, idx)=>{
-        return <FoodInfo key={idx}  item={item} />
+      {carbValue.map((item, idx) => {
+        return <FoodInfo key={idx} item={item} />;
       })}
     </>
   );

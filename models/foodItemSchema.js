@@ -12,7 +12,8 @@ const Schema = require('mongoose').Schema;
 
 const foodItemSchema = new Schema({
   tag_name: {type: String},
-  carbs: {type: Number, required: true}
+  carbs: {type: Number, required: true},
+  serving_size: {type:String}
 });
 
 module.exports = foodItemSchema;

@@ -8,6 +8,8 @@ import Meal from "../Meal/Meal";
 export default function SearchBar({ placeholder, query, setQuery }) {
   const [search, setSearch] = useState("");
 
+  const [meal, setMeal] = useState([]);
+
   function handleChange(e) {
     setQuery(e.target.value);
   }
@@ -50,7 +52,7 @@ export default function SearchBar({ placeholder, query, setQuery }) {
     nutrition.serving_unit = foodItem.serving_unit;
     nutrition.tag_name = foodItem.tag_name;
     nutrition.photo = foodItem.photo.thumb;
-    console.log(foodItem.photo.thumb);
+    // console.log(foodItem.photo.thumb);
     foodItem.full_nutrients.map((value) => {
       if (value.attr_id === 205) {
         nutrition.carbs = parseInt(value.value);
@@ -75,7 +77,7 @@ export default function SearchBar({ placeholder, query, setQuery }) {
         </div>
       </div>
       {carbValue.map((item, idx) => {
-        return <FoodInfo key={idx} item={item} />;
+        return <FoodInfo key={idx} item={item} meal={meal} setMeal={setMeal} />;
       })}
     </>
   );

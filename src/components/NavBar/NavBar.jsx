@@ -45,7 +45,12 @@ export default function NavBar({ user, setUser }) {
           <ul className={click ? "nav-menu active" : "nav-menu"}>
               <li className="nav-item">
               <Link to="/" className="nav-links" onClick={closeMobileMenu}>
-                Restaurants
+                Search Restaurants
+              </Link>
+              </li>
+              <li>
+              <Link to="/favrest" className="nav-links" onClick={closeMobileMenu}>
+                Favorite Restaurants
               </Link>
               </li>
               <li>

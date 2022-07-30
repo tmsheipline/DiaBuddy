@@ -1,7 +1,7 @@
 import "./SearchBar.css";
 import { useState, useEffect } from "react";
 import { FaSearch } from "react-icons/fa";
-import RenderAPI from "../../components/API/RenderAPI";
+// import RenderAPI from "../../components/API/RenderAPI";
 import FoodInfo from "../FoodInfo/FoodInfo";
 import Meal from "../Meal/Meal";
 
@@ -72,7 +72,7 @@ export default function SearchBar({ placeholder, query, setQuery }) {
           <button onClick={apiGet}>
             <FaSearch />
           </button>
-          <Meal />
+          <Meal meal={meal} setMeal={setMeal}/>
           <hr />
         </div>
       </div>

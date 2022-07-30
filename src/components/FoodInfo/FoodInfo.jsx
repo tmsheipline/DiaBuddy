@@ -38,10 +38,17 @@ export default function FoodInfo({ item, meal, setMeal }) {
         {/* <button type="submit" onClick={addToMeal}> Add to Meal </button> */}
         <button
           type="submit"
+          className="btn-outline-primary"
           onClick={() => addToMeal(item.tag_name, item.carbs)}
         >
           Add to Meal
         </button>
+        {/* <button
+          type="submit"
+          onClick={removeMeal}
+        >
+          Remove from Meal
+        </button> */}
         <hr />
       </div>
     </>

@@ -26,7 +26,7 @@ export default function App() {
           <Routes>
             <Route path="/" element={<SelectMealPage />} />
             <Route path="/favrest" element={<FavoriteRestuarantPage/>} />
-            <Route path="/fiveguys" element={<MealHistoryPage/>}/>
+            {/* <Route path="/fiveguys" element={<MealHistoryPage/>}/> */}
           </Routes>
         </>
       ) : (

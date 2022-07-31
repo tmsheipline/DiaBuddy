@@ -1,6 +1,6 @@
 .App {
   text-align: center;
-  background-color: grey;
+  background:linear-gradient(360deg, rgb(31, 207, 195) 4.29%, rgb(31, 145, 207) 50.93%);
   height: 100vh;
 }
 

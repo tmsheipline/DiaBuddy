@@ -76,9 +76,11 @@ export default function SearchBar({ placeholder, query, setQuery }) {
           <hr />
         </div>
       </div>
+      <div>
       {carbValue.map((item, idx) => {
         return <FoodInfo key={idx} item={item} meal={meal} setMeal={setMeal} />;
       })}
+      </div>
     </>
   );
 }

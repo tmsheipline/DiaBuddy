@@ -4,3 +4,34 @@ form {
     gap: 1.25vmin;
     color: black;
 }
+
+.allData{
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+.api-data{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+}
+
+ul{
+    list-style: none;
+}
+/* 
+.info{
+    display: grid;
+    grid-template-columns: 1fr;
+} */
+
+/* .infoitem{
+    display: fle
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    overflow-x: scroll;
+} */

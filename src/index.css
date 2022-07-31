@@ -1,8 +1,11 @@
 .form-container {
   padding: 3vmin;
-  background-color: lightblue;
+  background-color: #0800804f;
   border: .1vmin solid black;
   border-radius: 1vmin;
+  max-width: 50%;
+  text-align: center;
+  margin: auto;
 }
 
 p.error-message {
@@ -21,6 +24,7 @@ label {
   font-size: 2vmin;
   display: flex;
   align-items: center;
+  color: white;
 }
 
 input {
@@ -41,7 +45,7 @@ button, a.button {
   margin: 1vmin;
   padding: 1vmin;
   color: var(--white);
-  background-color: var(--orange);
+  background-color: navy;
   font-size: 2vmin;
   font-weight: bold;
   text-decoration: none;
@@ -70,4 +74,8 @@ button:disabled, form:invalid button[type="submit"] {
 button[type="submit"] {
   grid-column: span 2;
   margin: 1vmin 0 0;
+}
+
+ul{
+  text-decoration: none;
 }

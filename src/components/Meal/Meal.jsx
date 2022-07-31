@@ -27,13 +27,13 @@ export default function Meal({ item, meal, setMeal }) {
       <div>
         {meal.map((item, key) => (
           <div key={key}>
-            {item.foodname} - Carbs: {item.carbs} {key}
-            <button onClick={() => removeItem(key)}>Remove</button>
+            {item.foodname} - Carbs: {item.carbs}
+            <button className="btn-sm" onClick={() => removeItem(key)}>Remove</button>
           </div>
         ))}
       </div>
       <div>
-        <button type="button" className="btn btn-outline-info btn-sm">
+        <button type="button" className="btn btn-sm">
           Calculate Total Carbs
         </button>
       </div>

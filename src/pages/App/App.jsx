@@ -17,8 +17,8 @@ export default function App() {
         <>
           <NavBar user={user} setUser={setUser} />
           <Routes>
-            <Route path="/" element={<SelectMealPage />} />
-            <Route path='/mealhistory' element={<MealHistoryPage/>} />
+            <Route path="/" element={<SelectMealPage user={user} />} />
+            <Route path='/mealhistory' element={<MealHistoryPage user={user}/>} />
           </Routes>
         </>
       ) : (

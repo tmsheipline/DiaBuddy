@@ -16,3 +16,9 @@ form {
     max-height: 50vh;
     
 }
+
+.allData{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}

@@ -1,14 +1,15 @@
 import "./SearchBar.css";
-import { useState, useEffect } from "react";
+import { useState} from "react";
 import { FaSearch } from "react-icons/fa";
-// import RenderAPI from "../../components/API/RenderAPI";
 import FoodInfo from "../FoodInfo/FoodInfo";
 import Meal from "../Meal/Meal";
 
-export default function SearchBar({ placeholder, query, setQuery }) {
+export default function SearchBar({ placeholder, query, setQuery, user }) {
   const [search, setSearch] = useState("");
 
   const [meal, setMeal] = useState([]);
+
+  // console.log(user)
 
   function handleChange(e) {
     setQuery(e.target.value);
@@ -60,13 +61,15 @@ export default function SearchBar({ placeholder, query, setQuery }) {
           </button>
       <div className="search">
           <aside className="meal">
-          <Meal meal={meal} setMeal={setMeal}/>
+          <Meal meal={meal} setMeal={setMeal} user={user}/>
           <hr />
         </aside>
       <div>
+        <div className="allData">
       {carbValue.map((item, idx) => {
-        return <FoodInfo key={idx} item={item} meal={meal} setMeal={setMeal} />;
+        return <FoodInfo key={idx} item={item} user={user} meal={meal} setMeal={setMeal} />;
       })}
+      </div>
       </div>
       </div>
     </>

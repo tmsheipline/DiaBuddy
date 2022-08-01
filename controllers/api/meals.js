@@ -1,22 +1,27 @@
 const Meal = require('../../models/Meal')
 const express = require('express');
 const router = express.Router();
+const User = require('../../models/user')
 
-// export function saveMeal(foodname, carbs) {
-//     return sendRequest(`${BASE_URL}`, 'POST', { foodname, carbs });
-//   }
-  
-
-async function create(req,res){
+function create(req,res){
+    console.log(`create function ran`)
+    // let user
     try{
-        console.log(`Save Meal`)
-        const savedMeal = await Meal.create(req.body);
-        console.log(`this is the saved meal ${savedMeal}`)
-        res.json(savedMeal)
+        // console.log(req.body)
+        Meal.create(req.body)
+        .then((data)=> {
+            console.log(data)
+            // console.log(req.body[0].userId)
+            User.updateOne({_id:req.body[0].userId},
+                {$push:{meals:data}})
+            })
+            .then((message) => {
+                // console.log(message)
+            })
     } catch (e) {
         res.status(400).json(e)
     }
 }
 
 
-  module.exports = router;
+  module.exports = {create};

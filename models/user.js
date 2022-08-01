@@ -5,6 +5,11 @@ const bcrypt = require('bcrypt');
 
 const SALT_ROUNDS = 6;  // 6 is a reasonable value
 
+const mealSchema = new Schema({
+  userID: Number,
+  foodItems: Array,
+})
+
 const userSchema = new Schema({
     name: {type: String, required: true},
     email: {
@@ -14,6 +19,7 @@ const userSchema = new Schema({
       lowercase: true,
       required: true
     },
+    meals: [mealSchema],
     password: {
       type: String,
       trim: true,

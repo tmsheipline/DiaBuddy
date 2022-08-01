@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const usersCtrl = require('../../controllers/api/users');
-
+const mealCtrl = require('../../controllers/api/meals')
 // require the authorization middleware function
 const ensureLoggedIn = require('../../config/ensureLoggedIn');
 
@@ -13,6 +13,7 @@ router.get('/check-token', usersCtrl.checkToken);
 
 // POST /api/users
 router.post('/', usersCtrl.create);
+router.post('/mealhistory', mealCtrl.create);
 router.post('/login', usersCtrl.login)
 
 

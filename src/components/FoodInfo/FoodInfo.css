@@ -5,9 +5,14 @@ form {
     color: black;
 }
 
-.allData{
+/* .allData{
     display: grid;
     grid-template-columns: 1fr;
+} */
+
+.allData{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
 }
 
 .api-data{

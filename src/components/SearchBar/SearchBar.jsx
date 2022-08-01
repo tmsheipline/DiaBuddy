@@ -3,6 +3,7 @@ import { useState} from "react";
 import { FaSearch } from "react-icons/fa";
 import FoodInfo from "../FoodInfo/FoodInfo";
 import Meal from "../Meal/Meal";
+import TypingAnimation from "../TypingAnimation/TypingAnimation";
 
 export default function SearchBar({ placeholder, query, setQuery, user }) {
   const [search, setSearch] = useState("");
@@ -50,7 +51,9 @@ export default function SearchBar({ placeholder, query, setQuery, user }) {
     carbValue.push(nutrition);
   });
   return (
-    <>
+    <>  
+      <div className="meal">
+      <TypingAnimation />
           <input
             type="text"
             onChange={handleChange}
@@ -60,10 +63,9 @@ export default function SearchBar({ placeholder, query, setQuery, user }) {
             <FaSearch />
           </button>
       <div className="search">
-          <aside className="meal">
           <Meal meal={meal} setMeal={setMeal} user={user}/>
           <hr />
-        </aside>
+        </div>
       <div>
         <div className="allData">
       {carbValue.map((item, idx) => {

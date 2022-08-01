@@ -22,9 +22,9 @@ export default function FoodInfo({ item, meal, setMeal, user }) {
     <>
     <div className="allData">
       <div className="api-data">
-        <div>{item.tag_name}</div>
-        <div>Carbrohydrates: {item.carbs}</div>
-        <div>{item.serving_size}</div>
+        <div className="fixfont">{item.tag_name}</div>
+        <div className="fixfont">Carbrohydrates: {item.carbs}</div>
+        <div className="fixfont">{item.serving_size}</div>
         <div>
           <img src={item.photo} alt="" />
         </div>

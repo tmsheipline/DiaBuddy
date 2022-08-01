@@ -19,7 +19,9 @@
     display: flex;
     justify-content: space-between;
     height: 80px;
-    /* background-color: black; */
+    background-color: white;
+    /* background-color: grey */
+    /* background:linear-gradient(360deg, rgb(31, 207, 195) 4.29%, rgb(31, 145, 207) 50.93%); */
   }
   
   .container {

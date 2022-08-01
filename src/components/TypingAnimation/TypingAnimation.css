@@ -19,18 +19,18 @@ h3::after{
 
 h4::before{
     /* background: gray; */
-    background-color: #5b6eb2;
+    background-color:#e8f5ea;
     animation: typewriter 3s steps(50) forwards;
 }
 h3::before{
     /* background: gray; */
-    background-color:#5b6eb2;
+    background-color:#e8f5ea;
     animation: typewriter 3s steps(50) forwards;
 }
 
 h3::after{
     width: .125em;
-    background: black;
+    background:#e8f5ea;
     animation: typewriter 3s steps(50) forwards,
     blink 3s steps(20) forwards
 }

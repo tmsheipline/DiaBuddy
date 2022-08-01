@@ -15,8 +15,10 @@ export default function SelectMealPage({user}) {
 
   return (
     <>
-      <TypingAnimation />
+      <div className="top">
+      {/* <TypingAnimation /> */}
       <SearchBar placeholder="Search..." query={query} setQuery={setQuery} user={user} />
+      </div>
     </>
   );
 }

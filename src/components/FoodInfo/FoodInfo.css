@@ -10,18 +10,31 @@ form {
     grid-template-columns: 1fr;
 } */
 
-.allData{
+/* .allData{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-}
+} */
 
 .api-data{
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
-
+    flex-direction: column; 
+    background-color: white;
+    /* background:linear-gradient(360deg, rgb(31, 207, 195) 4.29%, rgb(31, 145, 207) 50.93%); */
+    margin: 0.25em;
+    padding: 0.5em;
+    max-width:min-content;
+    font-family: 'Playfair Display', serif;
+    text-align: center;
+    /* text-decoration: underline; */
 }
+
+.fixfont{
+    font-family: 'Playfair Display', serif;
+}
+
+
 
 ul{
     list-style: none;

@@ -52,3 +52,8 @@
       -webkit-transform: rotateX(90deg);
       transform: rotateX(90deg);
   }
+
+  .top{
+    display: flex;
+    flex-direction: column;
+  }

@@ -46,12 +46,11 @@ export default function Meal({ item, meal, setMeal, user }) {
         <h4>My Meal</h4>
         <div>
           {meal.map((item, key) => (
-            <div key={key}>
-              {item.foodname} - Carbs: {item.carbs}
+            <div className="fixfont" key={key}>
+              {item.foodname} - Carbs: {item.carbs} {item.serving_size}
               <button className="btn-sm" onClick={() => removeItem(key)}>
                 Remove
               </button>
-              <div>total number here</div>
             </div>
           ))}
         </div>
@@ -62,8 +61,8 @@ export default function Meal({ item, meal, setMeal, user }) {
           {/* <button type="button" onClick={saveButton} className="btn btn-lg">
             Save Meal
           </button> */}
-         
         </div>
+        <div>TOTAL</div>
       </div>
     </>
   );

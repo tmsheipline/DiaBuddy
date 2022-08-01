@@ -5,6 +5,7 @@ import {useNavigate} from 'react-router-dom'
 
 export default function Meal({ item, meal, setMeal, user }) {
   const [updated, setUpdated] = useState(false);
+  const [carbTotal, setCarbTotal] = useState(0)
   let tempMeal = meal;
   useEffect(() => {
     setMeal(tempMeal);
@@ -35,13 +36,18 @@ export default function Meal({ item, meal, setMeal, user }) {
     createMeal(tempMeal)
     console.log(`I was clicked`)
  }
-
+ 
+//  let carbTotal = 0
  function calculateCarbs(){
-    // console.log(tempMeal)
-    // tempMeal.map((item)=>{
-    //   console.log(item)
-    // })
-    console.log(tempMeal[0].carbs)
+  let total = 0
+    // console.log(tempMeal[0].carbs)
+    tempMeal.forEach((carbs)=>{
+      // console.log(carbs.carbs)
+      total = total + carbs.carbs
+      // console.log(typeof(total))
+      return total
+    })
+    setCarbTotal(total)
  }
 
   return (
@@ -59,11 +65,11 @@ export default function Meal({ item, meal, setMeal, user }) {
           ))}
         </div>
         <div>
-          <button className="btn btn-lg" onClick={() => calculateCarbs()}>
+          <button className="btn-lg" onClick={calculateCarbs}>
             Calculate Total Carbs
           </button>
         </div>
-        <div>TOTAL</div>
+        <div className="total-number">{carbTotal}</div>
       </div>
     </>
   );

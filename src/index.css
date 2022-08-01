@@ -1,6 +1,6 @@
 .form-container {
   padding: 3vmin;
-  background-color: #0800804f;
+  background-color: #293335;
   border: .1vmin solid black;
   border-radius: 1vmin;
   max-width: 50%;
@@ -46,7 +46,7 @@ button, a.button {
   margin: 1vmin;
   padding: 1vmin;
   color: var(--white);
-  background-color: black;
+  background-color: #293335;
   font-size: 2vmin;
   font-weight: bold;
   text-decoration: none;
@@ -58,7 +58,7 @@ button, a.button {
 }
 
 button:hover{
- background-color: orangered;
+ background-color: #b3bf4f;
 }
 
 button.btn-sm {
@@ -96,4 +96,5 @@ body{
  background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
+  font-family: 'Playfair Display', serif;
 }

@@ -6,11 +6,13 @@ form {
 }
 
 .search{
-    /* display: flex; */
-    /* justify-content: center; */
-    /* align-items: center; */
+    /* display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; */
     max-height: 50vh;
     margin: 2em;
+    
     
 }
 
@@ -18,4 +20,8 @@ form {
     display: flex;
     justify-content: space-evenly;
     flex-wrap: wrap;
+     /* background-image: url('https://wallpaperaccess.com/full/2689609.jpg');
+ background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover; */
 }

@@ -9,7 +9,7 @@ export default function AuthPage({setUser}) {
     return (
       <main className="AuthPage">
         <Logo />
-        <h2 className="tagline">The fast food carb counter app made for Diabetics who count carbs!</h2>
+        <h3 className="tagline">The fast food carb counter app made for Diabetics who count carbs!</h3>
         <br />
         {showLogin ? <LoginForm setUser={setUser} /> : <SignUpForm setUser={setUser} />}
         <h4 onClick={() => setShowLogin(!showLogin)}>{showLogin ?  <button>Dont have an account? Create Account</button> : <button>Log In</button>}</h4>

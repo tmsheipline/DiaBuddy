@@ -9,13 +9,17 @@
  background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
+  /* background: opacity 1; */
   height: 100vh;
   /* font-family: 'Edu VIC WA NT Beginner', cursive; */
   /* font-family: 'Abril Fatface', cursive; */
   /* font-family: 'Indie Flower', cursive; */
-  font-family: 'Rampart One', cursive;
+  /* font-family: 'Rampart One', cursive; */
   /* font-family: 'Cinzel Decorative', cursive; */
-  font-size: 1.5em;
+  font-family: 'Playfair Display', serif;
+  /* font-family: 'Diplomata', cursive; */
+  /* font-size: 1.5em; */
+  font-family: 'Alfa Slab One', cursive;
 }
 
 /* a:hover{
@@ -40,3 +44,10 @@ form {
   gap: 1.25vmin;
   color: black;
 }
+
+/* .main{ */
+  /* background-image: url('https://wallpaperaccess.com/full/2689609.jpg'); */
+  /* background-position: center center;
+   background-repeat: no-repeat;
+   background-size: cover;
+} */

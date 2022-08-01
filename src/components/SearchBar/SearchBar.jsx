@@ -63,8 +63,9 @@ export default function SearchBar({ placeholder, query, setQuery, user }) {
             <FaSearch />
           </button>
       <div className="search">
+      {/* <img src="/foodcharacters.png" alt="" /> */}
           <Meal meal={meal} setMeal={setMeal} user={user}/>
-          <hr />
+          {/* <hr /> */}
         </div>
       <div>
         <div className="allData">

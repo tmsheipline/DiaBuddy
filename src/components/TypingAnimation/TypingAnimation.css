@@ -46,3 +46,9 @@ h3::after{
     }
 }
 
+.animation{
+   font-family: 'Rampart One', cursive;
+   /* font-family: 'Diplomata', cursive; */
+   font-family: 'Alfa Slab One', cursive;
+}
+

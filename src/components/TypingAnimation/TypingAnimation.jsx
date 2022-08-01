@@ -7,7 +7,7 @@ import React from 'react'
 function TypingAnimation() {
   return (
     <>
-    <h3>Search Food Item</h3> 
+    <h3 className="animation">Search Food Item</h3> 
     </>
   )
 }

@@ -37,7 +37,7 @@ export default function NavBar({ user, setUser }) {
       <div className="nav-bar container">
         <div className="navbar-container container">
           <Link to="/" className="navbar-logo" onClick={closeMobileMenu}>
-            DiaBuddy
+            <img className="Logo" src="/Diabuddy(2).png" alt="" />
           </Link>
           <div className="menu-icon" onClick={handleClick}>
             {click ? <FaTimes /> : <FaBars />}
@@ -53,11 +53,11 @@ export default function NavBar({ user, setUser }) {
                 Favorite Restaurants
               </Link>
               </li> */}
-              <li>
+              {/* <li>
               <Link to="/mealhistory" className="nav-links" onClick={closeMobileMenu}>
                 Meal History
               </Link>
-              </li>
+              </li> */}
               {/* <li className="nav-btn">
               {button ? (
                 <Link to='/AuthPage' className="btn-link">

@@ -33,18 +33,6 @@ export default function SearchBar({ placeholder, query, setQuery }) {
         setData(json.common);
       });
   };
-  // working
-  // let carbValue = [];
-  //   data.forEach((foodItem) => {
-  //     let nutrition = {};
-  //     nutrition.tag_name = foodItem.tag_name;
-  //     foodItem.full_nutrients.map((value) => {
-  //       if (value.attr_id === 205) {
-  //         nutrition.carbs = value.value;
-  //       }
-  //     });
-  //     carbValue.push(nutrition);
-  //   });
 
   let carbValue = [];
   data.forEach((foodItem, idx) => {

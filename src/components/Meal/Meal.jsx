@@ -28,12 +28,12 @@ export default function Meal({ item, meal, setMeal }) {
         <button type="button" className="btn btn-lg">
           Calculate Total Carbs
         </button>
-        {/* <form action="" method="POST">
+        <form action="/mealhistory" method="POST">
             <input type="hidden" name="itemfoodname" />
             <input type="hidden" name="itemcarbs"/>
-        <button type="submit" className="btn btn-lg">Save Meal
+        <button type="submit"className="btn btn-lg">Save Meal
         </button>
-        </form> */}
+        </form>
       </div>
       </div>
     </>

@@ -31,11 +31,11 @@ app.use(require('./config/checkToken'));
 
 // Put API routes here, before the "catch all" route
 app.use('/api/users', require('./routes/api/users'));
-app.use('api/selectedMeal', require('./routes/api/meals'))
+// app.use('api/selectedMeal', require('./routes/api/meals'))
 
 // Protect the api routes below from anonymous users
 const ensureLoggedIn = require('./config/ensureLoggedIn');
-app.use('/api/foodItems', ensureLoggedIn, require('./routes/api/foodItems'));
+// app.use('/api/foodItems', ensureLoggedIn, require('./routes/api/foodItems'));
 
 // The following "catch all" route (note the *) is necessary
 // to return the index.html on all non-AJAX requests

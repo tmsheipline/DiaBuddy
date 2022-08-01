@@ -18,7 +18,7 @@ export default function App() {
           <NavBar user={user} setUser={setUser} />
           <Routes>
             <Route path="/" element={<SelectMealPage />} />
-            <Route path='/mealhistory' element={<MealHistoryPage />} />
+            <Route path='/mealhistory' element={<MealHistoryPage/>} />
           </Routes>
         </>
       ) : (

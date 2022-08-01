@@ -25,6 +25,7 @@ label {
   display: flex;
   align-items: center;
   color: white;
+  
 }
 
 input {
@@ -79,3 +80,7 @@ button[type="submit"] {
 ul{
   text-decoration: none;
 }
+
+/* html{ */
+  /* background:linear-gradient(360deg, rgb(31, 207, 195) 4.29%, rgb(31, 145, 207) 50.93%); */
+/* } */

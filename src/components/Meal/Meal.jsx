@@ -1,4 +1,5 @@
 import { useState,useEffect } from "react";
+import "./Meal.css"
 
 
 export default function Meal({ item, meal, setMeal }) {
@@ -8,21 +9,12 @@ export default function Meal({ item, meal, setMeal }) {
     function removeItem(key) {
         tempMeal.splice(key, 1); 
         setUpdated(!updated)
-        // setTimeout(setMeal(tempMeal), 1000)
         console.log(tempMeal);
-        // setMeal(tempMeal.splice(key, 1));
-        // console.log(key);
     }
-  
-//   function removeItem(key) {
-//     let tempMeal = meal;
-//     tempMeal = tempMeal.filter(key, 1);
-//     console.log(tempMeal);
-//     // setMeal(tempMeal.splice(key, 1));
-//     // console.log(key);
-//   }
+
   return (
     <>
+    <div className="meal-container">
       <h4>My Meal</h4>
       <div>
         {meal.map((item, key) => (
@@ -33,9 +25,16 @@ export default function Meal({ item, meal, setMeal }) {
         ))}
       </div>
       <div>
-        <button type="button" className="btn btn-sm">
+        <button type="button" className="btn btn-lg">
           Calculate Total Carbs
         </button>
+        {/* <form action="" method="POST">
+            <input type="hidden" name="itemfoodname" />
+            <input type="hidden" name="itemcarbs"/>
+        <button type="submit" className="btn btn-lg">Save Meal
+        </button>
+        </form> */}
+      </div>
       </div>
     </>
   );

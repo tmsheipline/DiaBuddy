@@ -1,8 +1,24 @@
 .App {
   text-align: center;
-  background:linear-gradient(360deg, rgb(31, 207, 195) 4.29%, rgb(31, 145, 207) 50.93%);
+  /* background:linear-gradient(360deg, rgb(31, 207, 195) 4.29%, rgb(31, 145, 207) 50.93%); */
+  /* background: #292929; */
+  /* background: #616161; */
+  background: #5b6eb2;
+  /* background: url('https://you.com/proxy?url=https%3A%2F%2Ftse4.mm.bing.net%2Fth%3Fid%3DOIP.mp0Ic-pltEUnY6stTsv6HQHaEo%26w%3D690%26c%3D7%26pid%3DApi%26p%3D0'); */
+  /* background-size: cover; */
+  /* background-repeat: repeat; */
   height: 100vh;
+  /* font-family: 'Edu VIC WA NT Beginner', cursive; */
+  /* font-family: 'Abril Fatface', cursive; */
+  /* font-family: 'Indie Flower', cursive; */
+  font-family: 'Rampart One', cursive;
+  /* font-family: 'Cinzel Decorative', cursive; */
+  font-size: 1.5em;
 }
+
+/* a:hover{
+  color: none;
+} */
 
 .imagegrid{
   display: flex;

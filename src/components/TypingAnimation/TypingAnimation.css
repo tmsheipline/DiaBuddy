@@ -19,12 +19,12 @@ h3::after{
 
 h4::before{
     /* background: gray; */
-    background-color: #39acc9;
+    background-color: #5b6eb2;
     animation: typewriter 3s steps(50) forwards;
 }
 h3::before{
     /* background: gray; */
-    background-color:#3191cf;
+    background-color:#5b6eb2;
     animation: typewriter 3s steps(50) forwards;
 }
 

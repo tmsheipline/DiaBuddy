@@ -43,18 +43,18 @@ export default function NavBar({ user, setUser }) {
             {click ? <FaTimes /> : <FaBars />}
           </div>
           <ul className={click ? "nav-menu active" : "nav-menu"}>
-              <li className="nav-item">
+              <li>
               <Link to="/" className="nav-links" onClick={closeMobileMenu}>
                 Search Restaurants
               </Link>
               </li>
-              <li>
-              <Link to="/favrest" className="nav-links" onClick={closeMobileMenu}>
+              {/* <li> */}
+              {/* <Link to="/favrest" className="nav-links" onClick={closeMobileMenu}>
                 Favorite Restaurants
               </Link>
-              </li>
+              </li> */}
               <li>
-              <Link to="/selectmeal" className="nav-links" onClick={closeMobileMenu}>
+              <Link to="/mealhistory" className="nav-links" onClick={closeMobileMenu}>
                 Meal History
               </Link>
               </li>
@@ -71,12 +71,12 @@ export default function NavBar({ user, setUser }) {
                 </Link>
               )}
               </li> */}
-              <li className="nav-item">
+              <li>
               <Link to="" className="nav-links" onClick={closeMobileMenu}>
                 Welcome, {user.name}
               </Link>
               </li>
-                <li className="nav-item">
+                <li>
                 <Link to="" className="nav-links" onClick={handleLogOut}>
                   Log Out
                 </Link>

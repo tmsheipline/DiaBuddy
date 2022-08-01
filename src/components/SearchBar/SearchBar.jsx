@@ -62,8 +62,6 @@ export default function SearchBar({ placeholder, query, setQuery }) {
   });
   return (
     <>
-      <div className="search">
-        <div className="searchInputs">
           <input
             type="text"
             onChange={handleChange}
@@ -72,14 +70,16 @@ export default function SearchBar({ placeholder, query, setQuery }) {
           <button onClick={apiGet}>
             <FaSearch />
           </button>
+      <div className="search">
+          <aside className="meal">
           <Meal meal={meal} setMeal={setMeal}/>
           <hr />
-        </div>
-      </div>
+        </aside>
       <div>
       {carbValue.map((item, idx) => {
         return <FoodInfo key={idx} item={item} meal={meal} setMeal={setMeal} />;
       })}
+      </div>
       </div>
     </>
   );

@@ -37,7 +37,11 @@ export default function Meal({ item, meal, setMeal, user }) {
  }
 
  function calculateCarbs(){
-    
+    // console.log(tempMeal)
+    // tempMeal.map((item)=>{
+    //   console.log(item)
+    // })
+    console.log(tempMeal[0].carbs)
  }
 
   return (
@@ -58,9 +62,6 @@ export default function Meal({ item, meal, setMeal, user }) {
           <button className="btn btn-lg" onClick={() => calculateCarbs()}>
             Calculate Total Carbs
           </button>
-          {/* <button type="button" onClick={saveButton} className="btn btn-lg">
-            Save Meal
-          </button> */}
         </div>
         <div>TOTAL</div>
       </div>

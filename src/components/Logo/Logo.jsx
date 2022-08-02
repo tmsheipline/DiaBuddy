@@ -4,8 +4,10 @@ export default function Logo() {
   return (
     <>
       <img src="/DiaBuddy(2).png" className="logo" alt="Diabuddy logo" />
+      {/* <img src="https://imgur.com/edExa4E" className="logo" alt="Diabuddy logo" /> */}
     </>
   );
 }
 
-// https://imgur.com/a/1V9mc0s
+
+

@@ -1,5 +1,8 @@
 h3,h4{
     font-size: clamp(1rem, 3vw + 1rem, 4rem);
+/* Minimum value
+Preferred value
+Maximum value */
     position: relative;
     /* outline: 2px solid red; */
     width: max-content;
@@ -47,8 +50,6 @@ h3::after{
 }
 
 .animation{
-   font-family: 'Rampart One', cursive;
-   /* font-family: 'Diplomata', cursive; */
    font-family: 'Alfa Slab One', cursive;
 }
 

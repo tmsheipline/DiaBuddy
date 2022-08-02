@@ -52,61 +52,61 @@ app.listen(port, function() {
 app.use(express.static(path.join(__dirname, "build")));
 
 //SEED Data
-app.get("/seed/brands", (req, res) => {
-  const brandData = [
-    {
-      name: "Five Guys",
-      image:
-        "https://fabrikbrands.com/wp-content/uploads/Famous-Fast-Food-Logos-16-1200x750.png",
-    },
-    {
-      name: "Burger King",
-      image:
-        "https://fabrikbrands.com/wp-content/uploads/Famous-Fast-Food-Logos-6-1200x750.png",
-    },
-    {
-      name: "Burger Kind",
-      image:
-        "https://fabrikbrands.com/wp-content/uploads/Famous-Fast-Food-Logos-19-1200x750.png",
-    },
-    {
-      name: "McDonalds",
-      image:
-        "https://fabrikbrands.com/wp-content/uploads/Famous-Fast-Food-Logos-22-1200x750.png",
-    },
-    {
-      name: "Panda Express",
-      image:
-        "https://fabrikbrands.com/wp-content/uploads/Famous-Fast-Food-Logos-25-1200x750.png",
-    },
-    {
-      name: "Taco Bell",
-      image:
-        "https://fabrikbrands.com/wp-content/uploads/Famous-Fast-Food-Logos-34-1200x750.png",
-    },
-    {
-      name: "Wendys",
-      image:
-        "https://fabrikbrands.com/wp-content/uploads/Famous-Fast-Food-Logos-36-1200x750.png",
-    },
-    {
-      name: "Panera",
-      image:
-        "https://fabrikbrands.com/wp-content/uploads/Famous-Fast-Food-Logos-26-1200x750.png",
-    },
+// app.get("/seed/brands", (req, res) => {
+//   const brandData = [
+//     {
+//       name: "Five Guys",
+//       image:
+//         "https://fabrikbrands.com/wp-content/uploads/Famous-Fast-Food-Logos-16-1200x750.png",
+//     },
+//     {
+//       name: "Burger King",
+//       image:
+//         "https://fabrikbrands.com/wp-content/uploads/Famous-Fast-Food-Logos-6-1200x750.png",
+//     },
+//     {
+//       name: "Burger Kind",
+//       image:
+//         "https://fabrikbrands.com/wp-content/uploads/Famous-Fast-Food-Logos-19-1200x750.png",
+//     },
+//     {
+//       name: "McDonalds",
+//       image:
+//         "https://fabrikbrands.com/wp-content/uploads/Famous-Fast-Food-Logos-22-1200x750.png",
+//     },
+//     {
+//       name: "Panda Express",
+//       image:
+//         "https://fabrikbrands.com/wp-content/uploads/Famous-Fast-Food-Logos-25-1200x750.png",
+//     },
+//     {
+//       name: "Taco Bell",
+//       image:
+//         "https://fabrikbrands.com/wp-content/uploads/Famous-Fast-Food-Logos-34-1200x750.png",
+//     },
+//     {
+//       name: "Wendys",
+//       image:
+//         "https://fabrikbrands.com/wp-content/uploads/Famous-Fast-Food-Logos-36-1200x750.png",
+//     },
+//     {
+//       name: "Panera",
+//       image:
+//         "https://fabrikbrands.com/wp-content/uploads/Famous-Fast-Food-Logos-26-1200x750.png",
+//     },
     
     
 
 
     
     
-  ];
-  // Delete all ingredients
-  Brand.deleteMany({}).then((data) => {
-    // Seed Starter ingredients
-    Brand.create(brandData).then((data) => {
-      // send created fruits as response to confirm creation
-      res.json(data);
-    });
-  });
-});
+//   ];
+//   // Delete all ingredients
+//   Brand.deleteMany({}).then((data) => {
+//     // Seed Starter ingredients
+//     Brand.create(brandData).then((data) => {
+//       // send created fruits as response to confirm creation
+//       res.json(data);
+//     });
+//   });
+// });

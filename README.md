@@ -1,7 +1,7 @@
 # DiaBuddy
 
 # Deployment Link #
-
+## https://diabuddy-ts.herokuapp.com/
 
 ## A diabetics easy to use Carb Counter 
 

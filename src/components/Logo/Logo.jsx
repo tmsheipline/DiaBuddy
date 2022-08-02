@@ -3,7 +3,7 @@ import "./Logo.css";
 export default function Logo() {
   return (
     <>
-      <img src="../../../public/DiaBuddy(2).png" className="logo" alt="Diabuddy logo" />
+      <img src="/DiaBuddy(2).png" className="logo" alt="Diabuddy logo" />
     </>
   );
 }

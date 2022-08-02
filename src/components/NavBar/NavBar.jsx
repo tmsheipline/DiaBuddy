@@ -37,7 +37,7 @@ export default function NavBar({ user, setUser }) {
       <div className="nav-bar container">
         <div className="navbar-container container">
           <Link to="/" className="navbar-logo" onClick={closeMobileMenu}>
-            <img className="Logo" src="/Diabuddy(2).png" alt="" />
+            <img className="Logo" src="./Diabuddy(2).png" alt="" />
           </Link>
           <div className="menu-icon" onClick={handleClick}>
             {click ? <FaTimes /> : <FaBars />}

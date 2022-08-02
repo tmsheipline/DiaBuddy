@@ -6,8 +6,8 @@
 ## A diabetics easy to use Carb Counter 
 
 ## Screenshots
-![Screen Shot](https://imgur.com/a/zhUfPkh)
-![Screen Shot](https://imgur.com/a/Fez2DgG)
+![Screen Shot](./public/screenshothome.png)
+![Screen Shot](./public/screenshotlogin.png)
 
 ## As a user I want to:
 * Sign Up/Login

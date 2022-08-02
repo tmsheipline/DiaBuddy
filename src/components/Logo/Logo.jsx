@@ -8,4 +8,4 @@ export default function Logo() {
   );
 }
 
-https://imgur.com/a/1V9mc0s
+// https://imgur.com/a/1V9mc0s

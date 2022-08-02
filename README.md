@@ -20,6 +20,5 @@
 * MERN Stack
 
 ## Ice Box: 
-* Mobile App - Friendly all the way
-* Auto Carb Calculator
-* Add own meal with carbs saved for future use
+* Auto Carb Calculator - instead of having to click the button
+* Meal History Page

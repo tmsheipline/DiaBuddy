@@ -71,7 +71,7 @@ export default function NavBar({ user, setUser }) {
                 </Link>
               )}
               </li> */}
-              <li>
+              {/* <li>
               <Link to="" className="nav-links" onClick={closeMobileMenu}>
                 Welcome, {user.name}
               </Link>
@@ -80,7 +80,7 @@ export default function NavBar({ user, setUser }) {
                 <Link to="" className="nav-links" onClick={handleLogOut}>
                   Log Out
                 </Link>
-              </li>
+              </li> */}
           </ul>
         </div>
       </div>

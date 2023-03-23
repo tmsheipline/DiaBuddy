@@ -13,17 +13,17 @@ export default function App() {
 
   return (
     <main className="App">
-      {user ? (
+      {/* {user ? ( */}
         <>
-          <NavBar user={user} setUser={setUser} />
+          {/* <NavBar user={user} setUser={setUser} /> */}
+          <NavBar />
           <Routes>
-            <Route path="/" element={<SelectMealPage user={user} />} />
-            <Route path='/mealhistory' element={<MealHistoryPage user={user}/>} />
+            <Route path="/" element={<SelectMealPage  />} />
+            <Route path='/mealhistory' element={<MealHistoryPage />} />
           </Routes>
         </>
-      ) : (
-        <AuthPage setUser={setUser} />
-      )}
+        {/* <AuthPage /> */}
+
     </main>
   );
 }

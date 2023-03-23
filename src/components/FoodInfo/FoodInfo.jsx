@@ -10,7 +10,7 @@ export default function FoodInfo({ item, meal, setMeal, user }) {
     const object = {
       foodname: e,
       carbs: a,
-      userId: user._id,
+      // userId: user._id,
     };
     // console.log(object);
     meals.push(object);

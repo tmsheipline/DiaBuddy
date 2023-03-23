@@ -1,6 +1,6 @@
 import "./NavBar.css";
 import { Link } from "react-router-dom";
-import * as userService from "../../utilities/users-service";
+// import * as userService from "../../utilities/users-service";
 import { FaBars, FaTimes } from "react-icons/fa";
 import { useState } from "react";
 // import {Button} from '../Button/Button'
@@ -26,12 +26,12 @@ export default function NavBar({ user, setUser }) {
     setClick(!click);
   }
 
-  function handleLogOut() {
-    // Delegate to the users-service
-    userService.logOut();
-    // Update state will also cause a re-render
-    setUser(null);
-  }
+  // function handleLogOut() {
+  //   // Delegate to the users-service
+  //   userService.logOut();
+  //   // Update state will also cause a re-render
+  //   setUser(null);
+  // }
   return (
     <>
       <div className="nav-bar container">

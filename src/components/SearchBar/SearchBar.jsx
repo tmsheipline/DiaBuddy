@@ -6,7 +6,7 @@ import Meal from "../Meal/Meal";
 import TypingAnimation from "../TypingAnimation/TypingAnimation";
 
 export default function SearchBar({ placeholder, query, setQuery, user }) {
-  const [search, setSearch] = useState("");
+  // const [search, setSearch] = useState("");
 
   const [meal, setMeal] = useState([]);
 
